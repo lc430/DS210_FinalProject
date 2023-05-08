@@ -2,6 +2,8 @@ use std::collections::VecDeque;
 use crate::graph::Graph;
 
 type Vertex = usize;
+type ListOfEdges = Vec<(Vertex,Vertex)>;
+type AdjacencyLists = Vec<Vec<Vertex>>;
 
 pub fn bfs_computation(start: Vertex, graph: &Graph) -> i32{
     let mut distance: Vec<Option<u32>> = vec![None;graph.n];
